@@ -1,0 +1,53 @@
+
+
+ let array =[
+     42,
+     "helloworld",
+     true,
+     {
+          name:"ejaz",
+          age: 20,
+          isStudent:false
+     },
+     false,
+     13.4,
+     "Javascprit is Fun!"
+ ]
+ //               1                   //
+let stringArray = array.map(element => String(element));
+
+console.log(stringArray)
+//2//
+let find = array.filter((e,v)=>{
+     return typeof e === "number"
+})
+console.log(find)
+//3//
+let arrayforeach = array.forEach((e,t)=>{
+     console.log(typeof e)
+})
+//4//
+let sum = array.reduce((a,e)=>{
+return a  + ( typeof e === "number"?e : 0)
+},0)
+console.log(sum);
+//5///
+let findArray = array.find((e)=>{
+return typeof e === "boolean" 
+})
+console.log(findArray);
+//6//
+let findIndex = array.findIndex((e,v)=>{
+return typeof e === "object";
+})
+console.log(findIndex);
+//7//
+let some = array.some((e)=>{
+return typeof e === "number" 
+})
+console.log(some);
+//8//
+let every = array.every((e)=>{
+return typeof e === "string" 
+})
+console.log(every);
